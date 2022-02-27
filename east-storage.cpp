@@ -22,11 +22,11 @@ int main()
     string date; //date is read as string
     double eastSt, eastEl, westSt, westEl;
     string datefromuser;
-    cout <<"Enter: ";
+    cout <<"Enter a date: ";
     cin >> datefromuser;
     ifstream fin("Current_Reservoir_Levels.tsv");
     if (fin.fail()) {
-        cerr << "File cannot be opened for reading." << endl;
+        cerr << "File can not be opened for reading." << endl;
         exit(1); //exit if failed to open the file
     }
     string junk; 
