@@ -5,7 +5,7 @@ Instructor: Tong Yi
 Assignment: Lab 3 A
 This program will read in the dataset taken from the NYC Open Data website.
 The data is filtered from the beginning of 2018 to the end of it.
-It will ask the user to input a date in the form (MM/DD/YYYY).
+It will ask the user to input a date in the form MM/DD/YYYY.
 Then it will print out the information about the East basin storage that day.
 */
 
@@ -19,7 +19,7 @@ using namespace std;
 
 int main()
 {
-    string date;
+    string date; //date is read as string
     double eastSt, eastEl, westSt, westEl;
     string datefromuser;
     cout <<"Enter: ";
@@ -32,8 +32,7 @@ int main()
     string junk; 
     getline(fin, junk);
     while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
-        // this loop reads the file line-by-line
-        fin.ignore(INT_MAX, '\n'); //skips to the end of line,
+        fin.ignore(INT_MAX, '\n'); 
         if(date==datefromuser){
             cout << "East basin storage: " << eastSt << " gallons" << endl;
         break;
